@@ -1,0 +1,5 @@
+bin.name = "trycmd-example"
+args = ["--name", "foo"]
+status.code = 0
+stdout = ""
+stderr = ""
