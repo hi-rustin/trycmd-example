@@ -1,4 +1,5 @@
 use clap::Parser;
+use std::io::Write;
 
 /// Simple program to greet a person
 #[derive(Parser, Debug)]
@@ -16,7 +17,9 @@ struct Args {
 fn main() {
     let args = Args::parse();
 
+    // Print the greeting to a file.
+    let mut file = std::fs::File::create("greeting.txt").unwrap();
     for _ in 0..args.count {
-        println!("Hello {}!", args.name)
+        writeln!(file, "Hello, {}!", args.name).unwrap();
     }
 }
