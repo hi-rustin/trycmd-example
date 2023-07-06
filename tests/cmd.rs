@@ -4,4 +4,5 @@ fn test_cmd() {
     let trycmd_example_binary = trycmd::cargo::cargo_bin("trycmd-example");
     t.register_bin("trycmd-example", &trycmd_example_binary);
     t.case("tests/cmd/*.toml");
+    t.case("README.md");
 }
