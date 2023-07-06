@@ -1,0 +1,5 @@
+ bin.name = "trycmd-example"
+ args = ["--help"]
+ status.code = 0
+ stdout = ""
+ stderr = ""
